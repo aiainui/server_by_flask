@@ -16,7 +16,7 @@ if SETTING_ENVS==0:
 
 
 class FlaskSettings:
-    PORT = 8431
+    PORT = 8080
     SERVICE_NUM = 6
     INFO_LOG_PATH = HOME_LOG + "/course_analysis"
     WE_LOG_PATH = HOME_LOG + "/course_analysis.we"
