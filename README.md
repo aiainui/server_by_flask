@@ -10,4 +10,14 @@
 
 `python run.py`
 
+# 访问服务
+
+- eg
+
+`http://localhost:8080/call_back`
+
+`http://localhost:8080/call_back`
+
+ps：localhost可以改为你所在的机器的外网地址或者域名，前提是你有这些。
+
 
