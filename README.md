@@ -4,7 +4,7 @@
 
 - 接口开发可在app.py中开发
 
-- 日志配置请在logging.py中设置
+- 日志配置请在logger.py中设置
 
 # 启动
 
