@@ -14,7 +14,7 @@
 
 - eg
 
-`http://localhost:8080/call_back`
+`http://localhost:8080`
 
 `http://localhost:8080/call_back`
 
