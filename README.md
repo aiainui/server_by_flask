@@ -27,11 +27,11 @@ ps：localhost可以改为你所在的机器的外网地址或者域名，前提
 `python test_api.py`
 
 # 环境安装
-
+```
 conda create -n flask python=3.12
 conda activate flask
 pip install -r requirements.txt
-
+```
 
 
 
