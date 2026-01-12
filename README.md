@@ -20,4 +20,18 @@
 
 ps：localhost可以改为你所在的机器的外网地址或者域名，前提是你有这些。
 
+# 测试接口
+
+确保服务已启动 (`python run.py`)，然后在另一个终端运行：
+
+`python test_api.py`
+
+# 环境安装
+
+conda create -n flask python=3.12
+conda activate flask
+pip install -r requirements.txt
+
+
+
 
