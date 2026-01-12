@@ -1,7 +1,9 @@
 import requests
 import json
+import os
 
-BASE_URL = "http://xxx:13020"
+# 可通过环境变量 API_PORT 覆盖，默认端口为 5000
+BASE_URL = f"http://xxx:{os.getenv('API_PORT', '5000')}"
 
 def test_index():
     print("Testing index interface: GET /")
@@ -38,8 +40,14 @@ def test_call_back():
             headers=headers
         )
         print(f"Status Code: {response.status_code}")
-        print(f"Response: {response.json()}")
-        if response.status_code == 200 and response.json().get('code') == 20000:
+        # Some servers may not return JSON; guard against that
+        try:
+            resp_json = response.json()
+            print(f"Response: {resp_json}")
+        except ValueError:
+            resp_json = None
+            print(f"Response text: {response.text}")
+        if response.status_code == 200 and resp_json and resp_json.get('code') == 20000:
             print("Call_back test passed!\n")
         else:
             print("Call_back test failed!\n")
@@ -50,4 +58,3 @@ if __name__ == "__main__":
     print(f"Starting API tests on {BASE_URL}...\n")
     test_index()
     test_call_back()
-
